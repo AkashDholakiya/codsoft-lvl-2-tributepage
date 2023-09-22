@@ -1,12 +1,10 @@
 import './App.css';
-import Navbar from './Component/Navbar';
+import Carousal from './Component/Carousal';
 
 function App() {
   return (
     <div className="App">
-        <Navbar />
-      <div className="container">
-      </div>
+        <Carousal />
     </div>
   );
 }
