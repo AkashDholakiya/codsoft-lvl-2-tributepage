@@ -1,8 +1,24 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 const APJ = () => {
+  const [scroll, setScroll] = useState(false);
+  const handleit = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth' 
+    })
+  }
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 200){
+      setScroll(true)
+    }else{
+      setScroll(false)
+    }
+  })
   return (
     <div className='mcontain'>
+      {scroll && <i onClick={handleit} className="scroller fa-solid fa-arrow-up"></i>}
       <div className="container">
         <img id='imgsardar' src="https://i.pinimg.com/1200x/54/ff/9a/54ff9a742a7fa19270b3ad3a02045923.jpg" alt="Not loaded" />
         <p className='letters'>

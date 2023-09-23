@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const APJ = () => {
+  const [scroll, setScroll] = useState(false);
+  const handleit = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth' 
+    })
+  }
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 200){
+      setScroll(true)
+    }else{
+      setScroll(false)
+    }
+  })
   return (
     <div className='mcontain'>
+      {scroll && <i onClick={handleit} className="scroller fa-solid fa-arrow-up" ></i>}
       <div className="container">
         <img id='imgrabindra' src="https://images.moneycontrol.com/static-mcnews/2021/05/Rabindranath-Tagore-1-770x433.jpg" alt="Not loaded" />
         <p className='letters'>
@@ -31,7 +47,7 @@ const APJ = () => {
           &#9758; Rabindranath Tagore's life and work exemplify the spirit of creativity, intellectual curiosity, and social consciousness. He was not only a poet but also a philosopher, a painter, a musician, and a beacon of hope for humanity. As we delve into his rich legacy, we find ourselves inspired by his timeless words and the enduring influence of the Bard of Bengal.
           <br /><br />
           <p className='letters' style={{textAlign: 'center'}}>
-          For More Information about Rabindranath Tagore Click <a href="https://en.wikipedia.org/wiki/Rabindranath_Tagore" target='_blank' rel='noreferrer'>Here</a>
+            For More Information about Rabindranath Tagore Click <a href="https://en.wikipedia.org/wiki/Rabindranath_Tagore" target='_blank' rel='noreferrer'>Here</a>
           </p>
         </p>
       </div>

@@ -1,8 +1,24 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-const APJ = (props) => {
+const APJ = () => {
+  const [scroll, setScroll] = useState(false);
+  const handleit = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth' 
+    })
+  }
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 200){
+      setScroll(true)
+    }else{
+      setScroll(false)
+    }
+  })
   return (
     <div className='mcontain'>
+      {scroll && <i onClick={handleit} className="scroller fa-solid fa-arrow-up"></i>}
       <div className="container">
         <img id='imgapj' src="https://media4support.com/wp-content/uploads/2020/07/Abdul-Kalam.jpg" alt="Not loaded" />
         <p className='letters'>
@@ -29,9 +45,9 @@ const APJ = (props) => {
           &nbsp;&nbsp;&nbsp;&nbsp;Dr. APJ Abdul Kalam's legacy continues to inspire generations. His life story underscores the significance of perseverance and dedication in achieving one's dreams. He remains a role model for countless individuals, especially students, who aspire to make a difference in the fields of science, technology, and education.
           <br />
           &#9758; Dr. APJ Abdul Kalam's life and work stand as a testament to the power of science, education, and leadership. His contributions to India's scientific and technological advancements, along with his humility and connection with the people, make him a beloved figure in the hearts of millions. As we reflect on his journey, we are reminded of his call to "Dream, Dream, Dream" and work relentlessly to turn those dreams into reality.
-        </p>
-        <p className='letters' style={{textAlign: 'center'}}>
-          For More Information about Dr. A.P.J Abdul Kalam Click <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" target='_blank' rel='noreferrer'>Here</a>
+          <p className='letters' style={{textAlign: 'center'}}>
+            For More Information about Dr. A.P.J Abdul Kalam Click <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" target='_blank' rel='noreferrer'>Here</a>
+          </p>
         </p>
       </div>
     </div>

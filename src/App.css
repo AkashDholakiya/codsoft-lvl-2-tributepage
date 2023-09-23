@@ -81,3 +81,12 @@
   font-size: 25px;
   word-spacing: 10px;
 }
+
+.scroller{
+  position: fixed;
+  right : 30px;
+  bottom: 15px; 
+  font-size: 30px;
+  cursor: pointer;
+}
+
