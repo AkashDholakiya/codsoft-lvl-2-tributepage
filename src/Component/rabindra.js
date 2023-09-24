@@ -18,7 +18,7 @@ const APJ = () => {
   })
   return (
     <div className='mcontain'>
-      {scroll && <i onClick={handleit} className="scroller fa-solid fa-arrow-up" ></i>}
+      {scroll && <i onClick={handleit} className="scroller fade-in-scroller fa-solid fa-arrow-up" ></i>}
       <div className="container">
         <img id='imgrabindra' src="https://images.moneycontrol.com/static-mcnews/2021/05/Rabindranath-Tagore-1-770x433.jpg" alt="Not loaded" />
         <p className='letters'>

@@ -18,7 +18,7 @@ const APJ = () => {
   })
   return (
     <div className='mcontain'>
-      {scroll && <i onClick={handleit} className="scroller fa-solid fa-arrow-up"></i>}
+      {scroll && <i onClick={handleit} className="scroller fade-in-scroller fa-solid fa-arrow-up"></i>}
       <div className="container">
         <img id='imgapj' src="https://media4support.com/wp-content/uploads/2020/07/Abdul-Kalam.jpg" alt="Not loaded" />
         <p className='letters'>

@@ -8,6 +8,17 @@ body {
   background-color: lightblue;
   scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+  display: none; 
+}
+::selection{
+  background-color: rgb(132, 132, 205);
+  color: black;
+}
+body { 
+-ms-overflow-style: none;  
+scrollbar-width: none;  
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
